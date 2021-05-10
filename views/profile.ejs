@@ -1,0 +1,79 @@
+<!-- Worked with my House Hayden 
+Kiany, Kevin C, Davida, Alief, Guthemberg, Kiany, Eden -->
+
+<!Doctype html>
+<html>
+<head>
+    <title>Boba-Barista</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+<div class="containerBoba">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-heart-o"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user.local.username %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+        <div class="col-sm-6">
+          <h3>Hey Boba-Barista!
+          </h3>
+          <h4> Once Order Is Made, Please Delete </h4>
+
+          <ul class="notFullFilled">
+            <% for(var i=0; i<messages.length; i++) {%>
+                <% if (messages[i].completedBy==null){%>
+            <li class="message">
+              <span class="name"><%=messages[i].name %></span>&nbsp;
+              <span class="order"><%= messages[i].order %></span>&nbsp;
+              <span class="size"><%= messages[i].size %></span>&nbsp;
+              <span><i class="fas fa-check-square" aria-hidden="true"></i></span> 
+            </li>
+            <% } %>
+          <% } %>
+          </ul>
+          <ul class="fullFilled">
+            <% for(var i=0; i<messages.length; i++) {%>
+                <% if (messages[i].completedBy!==null){%>
+            <li class="message">
+              <span class="name"><%=messages[i].name %></span>&nbsp;
+              <span class="order"><%= messages[i].order %></span>&nbsp;
+              <span class="size"><%= messages[i].size %></span>&nbsp;
+              <span><%= messages[i].completedBy %></span>
+              <span><i class="fas fa-check-square" aria-hidden="true"></i></span> 
+            </li>
+            <% } %>
+          <% } %>
+        </ul>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

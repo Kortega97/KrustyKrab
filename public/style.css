@@ -1,0 +1,81 @@
+body{
+  
+  word-wrap:break-word;
+  background-image: url('img/Back3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+img{
+  height: 200px;
+  float: left;
+}
+
+.containerBoba{
+  width:80%;
+  background-color: antiquewhite;
+  margin-left:10%;
+}
+
+h3,h4{
+  text-align: center;
+  font-weight:bolder;
+}
+.jumbotron{
+width:115%;
+}
+
+.messages{
+  padding:5%;
+  font-size: 15px;
+  margin-left:25%;
+  font-weight: bolder;
+  background-color: rgb(236, 201, 155);
+  width: 55%;
+}
+.cashierContainer{
+  position: absolute;
+  background-image: url(img/download.jpeg);
+  float: left;
+  left: 40%;
+  top: 100px;
+  background-color: antiquewhite;
+  width: 45%;
+  height: 290px;
+  text-align: center;
+}
+
+
+.well{
+padding:5%;
+margin-left:10%;
+font-size: 15px;
+}
+.cashierTitle{
+  
+  /* margin:10%; */
+  font-size: 18px;
+}
+
+button{
+  margin:5%;
+}
+.logo{
+  padding:0;
+  width: 50px;
+  height: 60px;
+}
+#header{
+  font-size: 143%;
+  text-align: left;
+}
+.main{
+  height: 500px;
+}
+#adminL{
+  float: left;
+    height: 80px;
+    text-align: center;
+    position: absolute;
+    top: 500px;
+    left: 50%;
+}

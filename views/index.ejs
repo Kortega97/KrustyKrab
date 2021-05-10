@@ -1,0 +1,57 @@
+<!-- Worked with House Cass and my House Hayden 
+Kiany,Kevin S , Kevin C, Alief, Jerry,Khorally , Rodas,Tamika   -->
+
+<!doctype html>
+<html>
+<head>
+    <title>Krusty Krab</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  
+    <div class="jumbotron main text-center">
+     
+        <h1 id='header'>Welcome to the Krusty Krab</h1>
+        <img src="img/images.jpeg" alt="">
+
+       
+        <section class="cashierContainer">
+
+
+          <div class="cashierTitle">
+            <h2>Input Order Below</h2>
+          </div>
+          <form class="cashierTitle"action="/messages" method="POST">
+            <input class="nameP" type="text" value="" placeholder="Sandwitch" name="name">
+            <input class="orderP" type="text" placeholder="Edits" name="order" >
+            <br>
+           
+            <select class="size" name="size">
+              <option  value="Small">Small Size</option>
+              <option value="Medium">regular Size</option>
+              <option value="Large">Viking Size</option>
+            </select>
+       
+            <button type="submit">Submit</button>
+            <img src="img/3dgifmaker42016.gif" >
+          </form>
+          
+       
+          </section>
+    </div>
+    <div id='adminL'>
+      <h3>Login or Signup To See Orders:</h3>
+
+      <a href="/login" class="btn btn-default"><span class="fa fa-user"></span>Login</a>
+        <a href="/signup" class="btn btn-default"><span class="fa fa-user"></span>Signup</a>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
